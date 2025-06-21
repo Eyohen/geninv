@@ -5,6 +5,7 @@ import report from '../assets/report.png'
 import custom from '../assets/custom.png'
 import colaborate from '../assets/collaborate.png'
 import FAQ from '../components/FAQ'
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState('about');
@@ -60,17 +61,17 @@ const Home = () => {
               >
                 FAQ
               </a>
-              <a
-                href="#"
+              <Link
+                to="/login"
                 className="px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-500 hover:text-white"
-                onClick={() => setActiveTab('services')}
+                onClick={() => setActiveTab('login')}
               >
                 Sign in
-              </a>
+              </Link>
 
-              <button className="ml-4 px-6 py-2 rounded-md text-sm font-medium bg-[#003059] text-white">
+              <Link to={'/signup'}><button className="ml-4 px-6 py-2 rounded-md text-sm font-medium bg-[#003059] text-white">
                 Get started
-              </button>
+              </button></Link>
             </div>
 
             {/* Mobile Navigation Button */}
